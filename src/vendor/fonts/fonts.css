@@ -1,0 +1,22 @@
+@font-face {
+  src: url(./Montserrat-Regular.woff2) format('woff2'),
+  url(./Montserrat-Regular.woff) format('woff'),
+  url(./Montserrat-Regular.ttf) format('ttf');
+  font-family: 'Montserrat-Regular';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(./PlayfairDisplay-Bold.ttf) format('ttf');
+  font-family: 'PlayfairDisplay-Bold';
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url(./PlayfairDisplay-Regular.ttf) format('ttf');
+  font-family: 'PlayfairDisplay-Regular';
+  font-style: normal;
+  font-weight: normal;
+}
