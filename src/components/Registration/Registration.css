@@ -11,7 +11,7 @@
 }
 
 .registration__container {
-  width: calc(100% - 42%);
+  width: 1110px;
   border: 3px solid #C4C4C4;
   box-sizing: border-box;
   position: relative;
@@ -91,15 +91,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-template-areas:
-          "title title"
-          "subtitle subtitle"
-          "form form"
-          "name phone"
-          "address address"
-          "submit-button submit-button";
+  grid-template-areas: "title title" "subtitle subtitle" "form form" "name phone" "address address" "submit-button submit-button";
   grid-column-gap: 30px;
-  padding-top: 81px;
+  padding-top: 41px;
 }
 
 .registration__input {
@@ -110,18 +104,21 @@
   width: 100%;
   height: 30px;
   color: #FFFFFF;
-  /*outline: red;*/
+}
+
+.registration__input:not(:last-of-type) {
+  margin-top: 40px;
 }
 
 .registration__input:-webkit-autofill,
 .registration__input:-webkit-autofill:hover,
 .registration__input:-webkit-autofill:focus,
-.registration__input:-webkit-autofill:active  {
+.registration__input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #282828 inset;
   -webkit-text-fill-color: #FFFFFF;
 }
 
-.registration__input::placeholder{
+.registration__input::placeholder {
   color: #FFFFFF;
   font-style: normal;
   font-weight: 500;
@@ -137,7 +134,7 @@
   grid-area: phone;
 }
 
-.registration__input_type_address{
+.registration__input_type_address {
   grid-area: address;
   margin-top: 40px;
 }
@@ -150,26 +147,50 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   grid-area: submit-button;
-  background: #282828;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
   max-width: 541px;
   width: 100%;
   height: 50px;
   margin-top: 50px;
+  background: #99862A;
+}
+
+.registration__submit-button:hover {
+  cursor: pointer;
+  background: #7a6726;
 }
 
 .registration__submit-button_inactive {
-
+  background: #282828;
+  pointer-events: none;
+  user-select: none;
 }
 
 @media screen and (max-width: 1280px) {
   .registration__container {
     padding-left: 5%;
     padding-right: 5%;
+    width: calc(100% - 10%);
+  }
+
+  .registration__container:before {
+    background: none;
+  }
+
+  .registration__container:after {
+    background: none;
   }
 }
+
 @media screen and (max-width: 768px) {
+  .registration__form {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "title" "subtitle" "form" "name" "phone" "address" "submit-button";
+  }
+
   .registration__container {
     width: calc(100% - 15%);
   }
