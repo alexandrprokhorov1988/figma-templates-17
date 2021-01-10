@@ -8,10 +8,11 @@
   background: #282828;
   padding-top: 129px;
   padding-bottom: 100px;
+  box-sizing: border-box;
 }
 
 .registration__container {
-  width: 1110px;
+  max-width: 1110px;
   border: 3px solid #C4C4C4;
   box-sizing: border-box;
   position: relative;
@@ -19,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 80px;
+  width: 100%;
 }
 
 .registration__container:before {
@@ -168,18 +170,23 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .registration {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
   .registration__container {
     padding-left: 5%;
     padding-right: 5%;
-    width: calc(100% - 10%);
+    width: 100%;
   }
 
   .registration__container:before {
-    background: none;
+    display: none;
   }
 
   .registration__container:after {
-    background: none;
+    display: none;
   }
 }
 
@@ -189,9 +196,5 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, auto);
     grid-template-areas: "title" "subtitle" "form" "name" "phone" "address" "submit-button";
-  }
-
-  .registration__container {
-    width: calc(100% - 15%);
   }
 }
