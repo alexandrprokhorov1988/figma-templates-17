@@ -151,6 +151,7 @@
 
 .collection__button:hover {
   background: #7a6726;
+  cursor: pointer;
 }
 
 .collection__photo-grid {
